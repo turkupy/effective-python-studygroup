@@ -1,7 +1,10 @@
 # Chapter 1: Pythonic Thinking
 
-Python runtimes? (Do we always use CPython? Is IPython a runtime?)
+Python runtimes?
+- Using Cython (C extensions for Python) for improving performance? (Since CPython is based on C and Python)
 
+
+*Pythonic?*
 - protected and private instance members (see `encapsulation.py`)
 - falsy values without checking len()
 - relative imports with `from .package_name import asd`  
