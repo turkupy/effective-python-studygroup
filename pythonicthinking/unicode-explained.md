@@ -16,7 +16,9 @@ Unicode is a standard used for encoding, representing and handling text that inc
 **4. What are UTF-8, UTF-16 and UTF-32?**
 
 Because computers use bytes to store data, Unicode codepoints need to be encoded into bytes. UTF-8, 16 and 32 are all encoding standards that use Unicode characters. The difference is in the amount of bytes used for encoding those codepoints. 
+
 UTF-8 can use 1, 2, 3 and 4 bytes to encode the codepoints. It is compatible with ASCII, since ASCII also uses 1 byte to encode characters. To encode non-English characters, UTF-8 will just use more than 1 byte to do it. 
+
 UTF-16 uses 2 and 4 bytes for encoding. It is works very well for many non-English characters (for example Asian characters) because it will use 2 bytes per each character. It is better to use UTF-16 when dealing with text written in Chinese, for example, because UTF-8 will use 3 or more bytes for those higher order characters. 
 UTF-32 uses 4 bytes and can encode any Unicode character in the world. It will use a lot of memory, so it's not recommended to use it. 
 
@@ -29,7 +31,9 @@ Encoding and decoding usually happen when reading files and converting its conte
 **6. How does Python handle Unicode?**
 
 Python2 is a bit of a mess because 'str' stores bytes and 'unicode' stores unicode code points. Default encoding for 'str' is ASCII. This works fine for English texts, but reading a file with Cyrillic characters requires decoding it first. 
+
 Python3 works differently. 'str' now stores unicode codepoints. To store strings in files Python3 uses bytes and the default encoding is UTF-8. 
+
 Beware that Python assumes that files and code you generate are encoded with UTF-8. Most data these days is encoded with UTF-8, but you should check the encoding when working with external files. 
 
 Here is a small example that shows what happens when we don't use the right encoding:
@@ -46,7 +50,10 @@ print(my_str_new) # returns '業慬', oops!
 **More examples can be found from these great sources:**
 
 https://realpython.com/python-encodings-guide/#one-byte-two-bytes-three-bytes-four
+
 http://kunststube.net/encoding/
+
 https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/
+
 https://towardsdatascience.com/a-guide-to-unicode-utf-8-and-strings-in-python-757a232db95c
  
