@@ -20,6 +20,7 @@ See `setters.py`
 ### Descriptors and reusable @property methods
 - Issue with @property is that those methods cannot be reused
 - Use descriptors (classes that implement `__get__`, `__set__` or `__delete__`) for reusable functionality
+- Maybe like an interface? That puts certain limits 
 
 ### Using `__getattr__`, `__setattr__`...
 - Called every time an attribute is accessed and it cannot be found in the objects instance dictionary
