@@ -9,8 +9,8 @@ Notes and sample code for the Effective Python study circle hosted by Turku.py i
 4. Metaclasses and Attributes 24.6. 11-12
 5. Concurrency and Parallelism 9.5. 13-14
 6. Built-in Modules
-
-Summary live: 
+7. Collaboration
+8. Production
 
 
 ## Running the examples
